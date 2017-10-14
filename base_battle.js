@@ -25,7 +25,8 @@ function generateEnemy(){
 		"Lets get down to clown",
 		"Do your second worst",
 		"Shit a brick and call it Mick",
-		"What are you doing in my swamp"
+		"What are you doing in my swamp",
+		"Be less alive",
 	];
 	const modifiers = [
 		"mildly",
@@ -64,6 +65,7 @@ function generateEnemy(){
 		["motherfuckers","buggertruckers"],
 		["gingerbread men","marzipan pigs"],
 		["ducks","geese"],
+		["labradors","tennis balls"],
 	];
 	const adj = pickRandom(adjectives);
 	const subj = pickRandom(subjectives);
@@ -75,7 +77,7 @@ function generateEnemy(){
 	const l = rand(zone*10 - 5, zone*10);
 	const s = rand(zone*10 - 5, zone*10);
 	const m = rand(0, zone);
-	const c = rand(zone*100 - 50, zone*100);
+	const c = rand(zone*100, zone*150);
 	const enemyHailing = pickRandom(commands) + ", you " + adj[1] + " " + subj[1] + "!";
 	enemy = new foe(enemyName, l, s, m, c, enemyHailing);
 }
