@@ -74,8 +74,8 @@ function generateEnemy(){
 	if (zone === undefined) zone = 1;
 	const mod = modifiers[parseInt(zone) - 1];
 	const enemyName = mod + " " + adj[0] + " " + subj[0];
-	const l = rand(zone*10 - 5, zone*10);
-	const s = rand(zone*10 - 5, zone*10);
+	const l = rand(zone*5, zone*10);
+	const s = rand(zone*5 - 5, zone*10);
 	const m = rand(0, zone);
 	const c = rand(zone*100, zone*150);
 	const enemyHailing = pickRandom(commands) + ", you " + adj[1] + " " + subj[1] + "!";
