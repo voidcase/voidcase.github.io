@@ -1,0 +1,61 @@
+<html>
+	<head>
+		<title>Yay</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="style.css" />
+	</head>
+	<body>
+		<div class="ship">
+			<div id="nameviewer">---</div>
+			<div id="laserviewer">---</div>
+			<div id="shieldsviewer">---</div>
+			<div id="missileviewer">---</div>
+			<div id="creditviewer">---</div>
+		</div>
+		<div class="mainWindow">
+			<div class="outputWindow">
+				<p id="output"></p>
+			</div>
+		</div>
+		<script
+				      src="https://code.jquery.com/jquery-3.2.1.min.js"
+	  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+   crossorigin="anonymous"></script>
+		<script src="https://www.gstatic.com/firebasejs/4.5.1/firebase.js"></script>
+		<script src="base.js"></script>
+		<script>
+// Initialize Firebase
+output("loading...");
+updateShip();
+var config = {
+	apiKey: "AIzaSyCr2oI-357S9sFqlYE0vL8ZlzcoAqvdA0I",
+	authDomain: "qrspacegame4.firebaseapp.com",
+	databaseURL: "https://qrspacegame4.firebaseio.com",
+	projectId: "qrspacegame4",
+	storageBucket: "",
+	messagingSenderId: "408991214216"
+};
+firebase.initializeApp(config);
+
+const artid = getQueryParams().artid;
+const artMap = {
+	elk: "E",
+	oak: "=",
+	moose: "m",
+	carrot: "c",
+	hip2b: "²"
+};
+const art = artMap[artid];
+const artref = firebase.database().ref('/artifacts/' + artid);
+artref.once('value', (snap) => {
+	if (snap.exists()) {
+		window.location = '/outpost.html';
+	} else {
+		artref.set({finder:name});
+		output("Congratulations! You have found the legendary '" + art + "'! We are one step closer to restoring order to the universe.");
+		output("You can now hyperdrive to the next location.");
+	}
+});
+		</script>
+	</body>
+</html>

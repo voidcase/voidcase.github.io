@@ -1,0 +1,69 @@
+<html>
+	<head>
+		<title>Outpost</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="style.css" />
+	</head>
+	<body>
+		<div class="ship">
+			<div id="nameviewer">---</div>
+			<div id="laserviewer">---</div>
+			<div id="shieldsviewer">---</div>
+			<div id="missileviewer">---</div>
+			<div id="creditviewer">---</div>
+		</div>
+<div class="mainWindow">
+	<div class="outputWindow">
+		<p id="output"></p>
+	</div>
+</div>
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+		<script src="base.js"></script>
+		<script>
+			var plot = Math.floor(Math.random()*4);
+			switch(plot){
+				case 0:
+					output("You dock at an outpost.");
+					output("It's appears to be abandoned, Most of the equipment is gone or broken but you manage to find some unused missiles to add to your arsenal.");
+					missiles += 2;
+				break;
+				case 1:
+					output("You intersect an unexpected meteor shower. Two of your laser cannons are damaged.");
+					laser -= 2;
+				break;
+				case 3:
+					output("You find that your communications officer has been gambling away your credits on the gublurgian klarf market. You leave him on a nearby astroid where he can sit and think about what he's done.");
+					credits -= 300;
+				break;
+				case 4:
+					output("One slow afternoon in the ships common room, you find an old spare shield generator under the sofa cushions.");
+					shields += 1;
+				break;
+				case 2:
+					output("You land at a tavern where you get very drunk, the next day you wake up to find that you renamed your ship.");
+					name = [
+						"s.s.dickbutt",
+						"ship_shaped_cat", 
+						"the_dogemobile", 
+						"cheese",
+						"millenium_pidgeon",  
+						"jan_senap",
+						"windrammer",
+						"spaghetti",
+						"kaviartaxi",
+						"harry_lizard",
+						"the_glad_valborg",
+						"the_embrace_of_shrek"
+						][Math.floor(Math.random()*9)];
+				break;
+			}
+			updateShip();
+			saveCookie();
+			output("You can now hyperdrive to the next location.");
+		</script>			
+	
+	</body>
+</html>

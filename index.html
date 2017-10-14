@@ -1,0 +1,40 @@
+<html>
+<head>
+<title>start</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+<div class="ship">
+	<div id="nameviewer">-</div>
+	<div id="laserviewer">-</div>
+	<div id="shieldsviewer">-</div>
+	<div id="missileviewer">-</div>
+	<div id="creditviewer">-</div>
+</div>
+<div class="mainWindow">
+	<div class="outputWindow">
+		<p id="output"></p>
+	</div>
+</div>
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+<script src="base.js"></script>
+<script>
+do {
+	name = prompt("What will you name your ship?").replace("/ /g","_");
+} while (name === "");
+shields = rand(10,20);
+laser = rand(5,10);
+missiles = rand(1,3);
+credits = 200;
+
+updateShip();
+saveCookie();
+output('And now begins your journey out beyond the skies, what perils and delights might lie in wait and take you by surprise?');
+</script>
+
+</body>
+</html>

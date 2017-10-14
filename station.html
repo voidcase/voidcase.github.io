@@ -1,0 +1,87 @@
+<html>
+	<head>
+		<title>station</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="style.css" />
+	</head>
+
+	<body>
+		<div class="ship">
+		<div id="nameviewer">placeholder</div>
+		<div id="laserviewer">dfsafsa</div>
+		<div id="shieldsviewer">hhhhh</div>
+		<div id="missileviewer">vvvvvvvvvvv</div>
+		<div id="creditviewer">fdsafgs</div>
+			<div id="input">
+				<button id="laserup" onclick="laserUp()"></button>
+				<button	id="shieldsup" onclick="shieldsUp()"></button>
+				<button id="missilesup" onclick="missilesUp()"></button>
+			</div>
+		</div>
+<div class="mainWindow">
+	<div class="outputWindow">
+		<p id="output"></p>
+	</div>
+</div>
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+		<script type="text/javascript" src="base.js"></script>
+		<script>
+			laserprice = 300;
+			shieldsprice = 200;
+			missileprice = 50;
+			$("#laserup").text("Upgrade laser (" + laserprice + "c)");
+			$("#shieldsup").text("Upgrade shields (" + shieldsprice + "c)");
+			$("#missilesup").text("Buy missiles (" + missileprice + "c)");
+			output("You dock at a trading station. Here you can spend credits to repair or upgrade your ship if you want to.");
+			
+			function laserUp(){
+				var price = laserprice;
+				if(credits>=price){
+					credits -= price;
+					laser++;
+					output("Your laser cannon has been upgraded.");
+					updateShip();
+					saveCookie();
+				}
+				else{
+					output("You can not afford to upgrade your laser.");
+				}
+			}
+			function shieldsUp(){
+				var price = shieldsprice;
+				if(credits>=price){
+					credits -= price;
+					shields++;
+					output("Your shields have been upgraded.");
+					updateShip();
+					saveCookie();
+				}
+				else{
+					output("You can not afford to upgrade your shields.");
+				}
+			}
+			function missilesUp(){
+				var price = missileprice;
+				if(credits>=price){
+					credits -= price;
+					missiles++;
+					output("You have bought a missile.");
+					updateShip();
+					saveCookie();
+				}
+				else{
+					output("You can not afford a missile.");
+				}
+			}
+
+
+		
+
+		</script>
+	</body>
+
+
+</html>

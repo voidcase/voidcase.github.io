@@ -1,0 +1,75 @@
+<html>
+	<head>
+		<title>scoreboard</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="style.css" />
+	<style>
+		#formula, #finders{
+			margin:auto;
+			text-align:center;
+		}
+		#formula {
+			font-size:20vw;
+		}
+		.unfound{
+			color:#070931;
+		}
+	</style>
+	</head>
+
+	<body>
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<div id="formula"></div>
+		<ul id="finders"></ul>
+		<script
+			src="https://code.jquery.com/jquery-3.2.1.min.js"
+			integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+			crossorigin="anonymous"></script>
+		<script src="https://www.gstatic.com/firebasejs/4.5.1/firebase.js"></script>
+		<script>
+
+// Initialize Firebase
+var config = {
+	apiKey: "AIzaSyCr2oI-357S9sFqlYE0vL8ZlzcoAqvdA0I",
+	authDomain: "qrspacegame4.firebaseapp.com",
+	databaseURL: "https://qrspacegame4.firebaseio.com",
+	projectId: "qrspacegame4",
+	storageBucket: "qrspacegame4.appspot.com",
+	messagingSenderId: "408991214216"
+};
+firebase.initializeApp(config);
+
+const artMap = {
+	elk: "E",
+	oak: "=",
+	moose: "m",
+	carrot: "c",
+	hip2b: "²"
+};
+
+firebase.database().ref('/artifacts').on('value', (snap) => {
+	var formulaDiv = $('#formula');
+	const snapval = snap.val() || {};
+	formulaDiv.empty();
+	Object.keys(artMap).forEach(x => {
+		var spn = $('<span></span>')
+			.text(artMap[x])
+			.addClass( (x in snapval) ? 'found' : 'unfound');
+		formulaDiv.append(spn);
+	});
+	var finders = $('#finders');
+	finders.empty();
+	$.each(snapval, (x,y) => {
+		finders.append($('<li></li>').text("'" + artMap[x] + "' found by the crew of the starship " + y.finder));
+	});
+});
+
+
+		</script>
+	<body>
+</html>
