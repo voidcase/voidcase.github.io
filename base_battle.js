@@ -120,13 +120,9 @@ function fireLaser(){
 function fireMissile(){
 	if(missiles >= 1){
 		missileAudio.play();
-		missiles -= 1;
-		enemy.s -= 5;
-		output("Your missile did 5 damage to the " + enemy.n);
-		if(Math.random() < 0.5) {
-			enemy.l -= 1;
-			output("it also took out one of their laser cannons!");
-		}
+		const disabled = rand(0, Math.floor(enemy.l/2));
+		enemy.l -= disabled;
+		output("You destroyed " + disabled + " of the enemys lasers!");
 	}
 	else{
 		output("You are out of missiles.");
