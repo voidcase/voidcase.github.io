@@ -1,6 +1,6 @@
 ---
 
-title: Mina tumreglar för att få saker att hända
+title: Mina tumregler för att få saker att hända
 
 ---
 
@@ -25,7 +25,7 @@ Vad är det minsta antalet deltagare för vilken den här aktiviteten funkar?
 Det kan kännas segt att ta en tid då vissa inte kan, men detta är inte sista gången ni ses.
 Ju snarare nästa aktivitet är, desto snarare kan näst-nästa aktivitet vara!
 
-Det finns dock ett undantag till den här regeln, när det är något särskilt som ska göras som ni inte direkt kan göra nästa vecka igen. En inflyttningsfest, Ett escaperoom besök, etc. då gäller istället...
+Det finns dock ett undantag till den här regeln, när det är något särskilt som ska göras som ni inte direkt kan göra om nästa vecka igen. En inflyttningsfest, En större utflykt, etc. då gäller istället...
 
 ## Lång horisont.
 För icke-alldagliga aktiviteter och särskilda sammankomster vill man kanske prioritera att så många som möjligt ur kretsen kan närvara.
