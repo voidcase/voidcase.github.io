@@ -1,6 +1,6 @@
-# Hur man får saker att bli av
-Detta är min egen teori om hur man bäst får sociala aktiviteter att faktiskt bli av.
-Jag gör en massa påståenden här som låter väldigt definitiva, men de är inte grundade i något mer än mina egna observationer, så ta det med en nypa salt.
+# Mina tumreglar för att få saker att hända
+Detta är min egen teori om hur man bäst får sociala aktiviteter att faktiskt bli av och inte rinna ut i sanden.
+Jag gör här en massa påståenden här som låter väldigt definitiva, men de är inte grundade i något mer än mina egna observationer, så ta det med en nypa salt.
 Detta skrevs ihop i en enda stream-of-conciousness radda och kommer nog revideras efterhand, men för tillfället får det duga.
 
 ## Fråga inte, föreslå.
