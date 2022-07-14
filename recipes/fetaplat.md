@@ -1,8 +1,9 @@
 ---
 
-title: Fetaplåt
+title: Fetaplåt mk1
 
 ---
+labbrapport från köket
 
 # ingredientser
  * potatis
@@ -25,6 +26,6 @@ title: Fetaplåt
  * Det var rätt gott att ha en klick rårörda lingon till.
 
 # nästa gång
- * prova ha det i ugnen lite längre
- * prova att strö panko över det hela innan det g
+ * Prova ha det i ugnen lite längre.
+ * Jag undrar hur det blir om man strör lite panko över det hela innan det åker in i ugnen.
 
